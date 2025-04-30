@@ -1,0 +1,1 @@
+# cursor-installer-updater-ubuntu
