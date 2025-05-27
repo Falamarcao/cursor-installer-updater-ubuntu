@@ -40,12 +40,9 @@ zenity --info --title="Cursor Updater" --text="A new update (v$LATEST_VERSION) i
       echo "$PERCENT"
     fi
   done
-  echo "70"
+  echo "90"
   echo "# Making AppImage executable..."
   chmod +x "$APPIMAGE_PATH"
-  echo "90"
-  echo "# Finalizing update..."
-  echo "$LATEST_VERSION" > "$VERSION_PATH"
   echo "100"
   echo "# Cursor updated to v$LATEST_VERSION."
 ) | zenity --progress \
@@ -55,6 +52,9 @@ zenity --info --title="Cursor Updater" --text="A new update (v$LATEST_VERSION) i
   --auto-close \
   --cancel-label="Cancel Update" \
   --width=400 --height=100
+
+# Write version
+echo "$LATEST_VERSION" > "$VERSION_PATH"
 
 # Final notification
 zenity --info --title="Cursor Updater" --text="Cursor updated to version $LATEST_VERSION successfully!"
