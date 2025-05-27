@@ -1,0 +1,13 @@
+# ~/.config/systemd/user/update-cursor.service
+
+[Unit]
+Description=Update Cursor AI IDE AppImage
+
+[Service]
+EnvironmentFile=%h/.config/systemd/user/cursor-env.conf
+ExecStart=/opt/cursor/update-cursor.sh
+Type=oneshot
+
+[Install]
+WantedBy=default.target
+
