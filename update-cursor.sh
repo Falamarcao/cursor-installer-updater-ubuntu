@@ -7,7 +7,7 @@ set -e
 INSTALL_DIR="/opt/cursor"
 APPIMAGE_PATH="$INSTALL_DIR/cursor.AppImage"
 VERSION_PATH="$INSTALL_DIR/version.txt"
-UPDATE_JSON_URL="https://www.cursor.com/api/download?platform=linux-x64&releaseTrack=stable"
+UPDATE_JSON_URL="https://cursor.com/api/download?platform=linux-x64&releaseTrack=stable"
 
 mkdir -p "$INSTALL_DIR"
 
